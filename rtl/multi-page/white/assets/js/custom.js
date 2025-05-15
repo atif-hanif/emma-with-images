@@ -47,3 +47,12 @@ btn.on('click', function(e) {
 const d = new Date();
 let year = d.getFullYear();
 document.getElementById("demo").innerHTML = year;
+
+"use strict";
+$(function() {
+    $(document).on("click", ".cutomizer-open-trigger", function(a) {
+        a.preventDefault(), $(".theme-customizer").addClass("theme-customizer-open")
+    }), $(document).on("click", ".cutomizer-close-trigger", function(a) {
+        a.preventDefault(), $(".theme-customizer").removeClass("theme-customizer-open")
+    })
+})
